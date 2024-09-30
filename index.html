@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clothing Store</title>
+    <link rel="stylesheet" href="seyle.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html"><h1 class="web-title">Clothing Store</h1></a>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search..." />
+        <button type="button" id="search-button">Search</button>
+      </div>
+
+      <nav class="link">
+        <a href="update.html">Update Page</a>
+        <a href="insert.html">Insert Page</a>
+        <a href="LodIn.html">Log-In</a>
+      </nav>
+    </header>
+    <main>
+      <div class="product-container" id="product-container">
+        <!-- Product cards will be dynamically inserted here -->
+      </div>
+    </main>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <img id="modal-image" src="" alt="" />
+        <h2 id="modal-name"></h2>
+        <p class="price" id="modal-price"></p>
+        <p id="modal-description"></p>
+      </div>
+    </div>
+
+    <div id="search-results"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

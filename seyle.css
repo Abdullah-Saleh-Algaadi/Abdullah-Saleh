@@ -1,0 +1,256 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #666363;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444; /* Darker background for contrast */
+  color: white; /* White text for better readability */
+  padding: 20px; /* More padding for a spacious feel */
+  border-radius: 18px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.web-title {
+  font-size: 1.8em; /* Larger title */
+  margin: 0; /* Remove default margin */
+  color: #7b77b4;
+}
+
+.search-container {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+}
+
+#search-input {
+  padding: 8px;
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  margin-right: 10px; /* Space between input and button */
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Button text */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker on hover */
+}
+
+nav {
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-direction: row; /* Ensure links are displayed in a row */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  justify-content: flex-start; /* Align links to the start */
+}
+
+nav a {
+  margin-left: 10px; /* Space between links */
+  padding: 10px; /* Padding for clickable area */
+  text-decoration: none;
+  color: white; /* Link color */
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-card {
+  background: rgb(144, 144, 193);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  width: 200px; /* Default width */
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.product-card:hover {
+  background: rgb(158, 158, 196);
+}
+
+.product-card img {
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.product-card h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.product-card p {
+  margin: 5px 0;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+}
+
+.modal-content {
+  position: absolute; /* Position relative to the modal */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to truly center */
+  background-color: #b8bdc2; /* Background color for content */
+  padding: 20px; /* Padding for content */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  max-width: 90%; /* Limit width on smaller screens */
+  max-height: 90%; /* Limit height to avoid overflow */
+  overflow-y: auto; /* Enable vertical scroll if content is too tall */
+}
+
+.modal-content img {
+  width: 95%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.close-button {
+  position: absolute; /* Position relative to the modal content */
+  top: 15px; /* Distance from the top */
+  right: 15px; /* Distance from the right */
+  color: #aaa; /* Default color */
+  font-size: 28px; /* Size of the button */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .web-title {
+    font-size: 1.5em; /* Slightly smaller title */
+    color: #7b77b4;
+  }
+
+  header {
+    flex-direction: column; /* Stack header items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .product-card {
+    width: calc(50% - 20px); /* Two cards per row with margin adjustment */
+  }
+
+  nav {
+    justify-content: flex-start; /* Keep links aligned to the start */
+  }
+
+  nav a {
+    margin-left: 10px; /* Adjust space for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .Login-Form {
+    padding: 20px; /* Less padding for smaller screens */
+  }
+
+  .Login-Form h1 {
+    font-size: 20px; /* Smaller heading */
+  }
+
+  .Login-Form input {
+    padding: 8px; /* Less padding for inputs */
+    font-size: 14px; /* Smaller font size */
+  }
+
+  button {
+    padding: 8px; /* Less padding for buttons */
+  }
+}
+
+/* Log in form .... */
+.Login-Form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.Login-Form h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.Login-Form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.Login-Form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+#Login-Button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#Login-Button:hover {
+  background-color: #0056b3;
+}
