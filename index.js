@@ -2,7 +2,7 @@ const products = [
   {
     image: "Image/ima1.jpg.JPG",
     name: "Cool T-Shirt",
-    price: "$19.99",
+    price: "$199.99",
     description: "A cool t-shirt for casual wear.",
   },
   {
